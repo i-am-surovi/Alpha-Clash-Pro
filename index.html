@@ -15,19 +15,24 @@
 <body class="font-poppins">
     <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
         <!-- home screen -->
-        <section class=" home min-h-screen text-white flex justify-center items-center hidden">
+        <section class=" home min-h-screen text-white flex justify-center items-center">
             <div class="flex flex-col items-center gap-10" >
                 <h1 class="text-8xl font-anton uppercase ">Alpha Clash Pro</h1>
                 <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button class="btn bg-white text-black">Play Now</button>
+                <button onclick="play()" class="btn bg-white text-black">Play Now</button>
             </div>
         </section>
         <!-- playground start-->
-        <section class="play-ground">
-            <div>
-                <!-- score -->
+        <section class="play-ground hidden">
+            <div class="flex flex-col items-center gap-20 pt-20">
+                <!-- screen -->
                 <div class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB3]">
-                    1024×320
+                    <div class="flex justify-center">
+                        <p class="bg-[#2F2941] text-white px-6 pb-4 rounded-b-xl h-full">Don't watch keyboard  while playing...</p>
+                    </div>
+                    <div class="flex justify-center items-center h-full">
+                        <p class="text-black font-bold text-9xl pb-10">Y</p>
+                    </div>
                 </div>
                 <!-- keyboard start-->
                  <div>
@@ -67,13 +72,13 @@
                  </div>
                 <!-- keyboard end -->
                 <!-- life score -->
-                <div>
-                    <button class="btn rounded-full bg-[#894189] text-white px-2">
+                <div class="flex justify-between w-3/4">
+                    <button class="btn rounded-full bg-[#894189] text-white px-4">
                         Life
                         <img src="images/heart.svg" alt="">
                         <span>1</span>
                     </button>
-                    <button class="btn">
+                    <button class="btn rounded-full bg-[#360490] text-white px-4">
                         Score
                         <img src="images/dollar.svg" alt="">
                         <span>1</span>
@@ -82,10 +87,19 @@
             </div>
         </section>   
         <!-- playground end -->
-        <section class="score">
-            
+        <!-- final score start-->
+        <section class="score flex justify-center items-center min-h-screen hidden">
+            <div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-6 rounded-lg">
+                <h1 class="text-8xl">
+                    <span class="font-extrabold">Score:</span>
+                    <span>14</span>
+                </h1>
+                <button class="btn">Play Again</button>
+                <p>Practice will make you a Pro</p>
+            </div>
         </section> 
     </main>
+    <script src="scripts/alpha-clas.js"></script>
 </body>
 
 </html>
