@@ -17,6 +17,7 @@
         <!-- home screen -->
         <section id="home-screen" class="min-h-screen text-white flex justify-center items-center">
             <div class="flex flex-col items-center gap-10" >
+                <p class="font-medium hover:font-bold">Developed By: Sumaiya Hossain Surovi</p>
                 <h1 class="text-8xl font-anton uppercase ">Alpha Clash Pro</h1>
                 <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
                 <button onclick="play()" class="btn bg-white text-black">Play Now</button>
@@ -35,7 +36,7 @@
                     </div>
                 </div>
                 <!-- keyboard start-->
-                 <div>
+                 <div class="pt-20">
                     <div class="flex justify-center gap-1 my-1 w-full">
                         <kbd id="q" class="kbd">q</kbd>
                         <kbd id="w" class="kbd">w</kbd>
@@ -73,28 +74,31 @@
                 <!-- keyboard end -->
                 <!-- life score -->
                 <div class="flex justify-between w-3/4">
+                    <!-- display Life -->
                     <button class="btn rounded-full bg-[#894189] text-white px-4">
                         Life
                         <img src="images/heart.svg" alt="">
-                        <span>1</span>
+                        <span id="current-life">5</span>
                     </button>
+                    <!-- display Score -->
                     <button class="btn rounded-full bg-[#360490] text-white px-4">
                         Score
                         <img src="images/dollar.svg" alt="">
-                        <span>1</span>
+                        <span id="current-score">0</span>
                     </button>     
                 </div>
             </div>
         </section>   
         <!-- playground end -->
         <!-- final score start-->
-        <section class="score flex justify-center items-center min-h-screen hidden">
+        <section id="final-score" class="flex justify-center items-center min-h-screen hidden">
             <div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-6 rounded-lg">
+                <h4 class="text-3xl" >Game Over</h4>
                 <h1 class="text-8xl">
                     <span class="font-extrabold">Score:</span>
-                    <span>14</span>
+                    <span id="last-score">14</span>
                 </h1>
-                <button class="btn">Play Again</button>
+                <button onclick="play()" class="btn">Play Again</button>
                 <p>Practice will make you a Pro</p>
             </div>
         </section> 
